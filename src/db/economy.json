@@ -181,13 +181,13 @@
       "_id": "8d7c5b3b45abe1be9455c4c7",
       "types": {
         "work": {
-          "timestamp": 1594302197148
+          "timestamp": 1594754479301
         },
         "crime": {
-          "timestamp": 1594228498353
+          "timestamp": 1594754497762
         }
       },
-      "money": 1097
+      "money": 1772
     },
     "d1e12ad930bf3f2e0c158cef": {
       "name": "No.",
@@ -361,7 +361,7 @@
       "_id": "ab0824be58e5afb05095d638",
       "types": {
         "work": {
-          "timestamp": 1594427123692
+          "timestamp": 1594762680171
         }
       },
       "money": 19
@@ -401,10 +401,10 @@
       "_id": "e42a1ba3ac6c2a639fb0a4d6",
       "types": {
         "work": {
-          "timestamp": 1594684933022
+          "timestamp": 1594753079424
         }
       },
-      "money": 283
+      "money": 168
     },
     "a79f3b4011773b1014f97473": {
       "name": "Caioz/17/Boy/Wolf/Fox/Cat/ | !help",
@@ -593,6 +593,42 @@
         }
       },
       "money": 844
+    },
+    "70d89d2d5981f2a3493815b9": {
+      "name": "Anonymous",
+      "_id": "70d89d2d5981f2a3493815b9",
+      "types": {
+        "crime": {
+          "timestamp": 1594754376167
+        }
+      },
+      "money": 306
+    },
+    "82dd09364df90277e747910e": {
+      "name": "Anonymous",
+      "_id": "82dd09364df90277e747910e",
+      "types": {
+        "crime": {
+          "timestamp": 1594754380733
+        },
+        "work": {
+          "timestamp": 1594754387572
+        }
+      },
+      "money": 1104
+    },
+    "448511742a2a060fc6e135bf": {
+      "name": "⨣ ⨣⨀ ๖ۣۜH͜r̬i͡7566 ⨀⨣ ⨣",
+      "_id": "448511742a2a060fc6e135bf",
+      "types": {
+        "work": {
+          "timestamp": 1594762620168
+        },
+        "crime": {
+          "timestamp": 1594762622703
+        }
+      },
+      "money": 182
     }
   }
 }

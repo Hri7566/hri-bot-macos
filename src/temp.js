@@ -97,19 +97,15 @@ module.exports = function () {
         }
     }, 0, false);
 
-    this.addcmd("temperature", `Usage: PREFIXtemperature <place>`, 1, msg => {
-        this.weather.find({search: msg.argcat.toLowerCase(), degreeType: 'F'}, (err, result) => { if(err) {console.log(err); return;}; if (!result[0]) {return this.chat("No such place.");}; this.chat(result[0]["current"]["temperature"] + "\u00b0F in " + result[0].location.name + "."); });
-    }, 0, false);
-
-    this.addcmd("weather", `Usage: PREFIXweather <place>`, 1, msg => {
+    this.addcmd(["weather","w"], `Usage: PREFIXweather <place>`, 1, msg => {
         this.weather.find({search: msg.argcat.toLowerCase(), degreeType: 'F'}, (err, result) => { if(err) {console.log(err); return;}; if (!result[0]) {return this.chat("No such place.");}; this.chat(`It is ${result[0].current.skytext.toLowerCase()} in ${result[0].location.name} and the temperature is ${result[0].current.temperature}\u00b0F. The 'feels like' temperature is ${result[0].current.feelslike}\u00b0F and the humidity is ${result[0].current.humidity}%. The wind speed is ${result[0].current.windspeed}.`); });
     }, 0, false);
 
-    this.addcmd("weatherc", `Usage: PREFIXweatherc <place>`, 1, msg => {
+    this.addcmd(["weatherc","wc"], `Usage: PREFIXweatherc <place>`, 1, msg => {
         this.weather.find({search: msg.argcat.toLowerCase(), degreeType: 'C'}, (err, result) => { if(err) {console.log(err); return;}; if (!result[0]) {return this.chat("No such place.");}; this.chat(`It is ${result[0].current.skytext.toLowerCase()} in ${result[0].location.name} and the temperature is ${result[0].current.temperature}\u00b0C. The 'feels like' temperature is ${result[0].current.feelslike}\u00b0C and the humidity is ${result[0].current.humidity}%. The wind speed is ${result[0].current.windspeed}.`); });
     }, 0, false);
 
-    this.addcmd("ballonstring", `Usage: PREFIXballonstring <user> | The cursor will follow the user using electrashave's BallOnString.js`, 1, msg => {
+    this.addcmd(["ballonstring","bos"], `Usage: PREFIXballonstring <user> | The cursor will follow the user using electrashave's BallOnString.js`, 1, msg => {
         let p = this.getPart(msg.argcat);
         if (p) {
             let pos2 = {x: 50, y: 50};
@@ -194,15 +190,11 @@ module.exports = function () {
         this.chat(this.getUptime());
     }, 0, true);
 
-    this.addcmd("test", `Usage: PREFIXtest`, 0, msg => {
-        this.chat(process.uptime());
-    }, 4, true); 
-
     this.addcmd("helpmewhattheheckisgoingon", `Usage: PREFIXhelpmewhatheheckisgoingon`, 0, msg => {
         this.chat("f i x e d m o m e n t");
     }, 0, true);
 
-    this.addcmd("bal", `Usage: PREFIXbal | Check your account balance.`, 0, msg => {
+    this.addcmd(["balance","bal"], `Usage: PREFIXbalance | Check your account balance.`, 0, msg => {
         let money = this.economy.getEconomyUserBy_id(msg.p._id);
         if (money) {
             this.chat(`${money.name}, you have $${money.money}.`);
