@@ -1,9 +1,16 @@
+require('dotenv').config();
 process.title = 7566;
 const Bot = require("./src/bot.js")
 
 //var name = "✿ ๖ۣۜṂᾄʀẋ☭Bot ";
 var name = "✿ ๖ۣۜ7566 ☭";
 var bot = new Bot(name);
+
+setTimeout(() => {
+    var bot2 = new Bot(name, "lobby2");
+    var bot3 = new Bot(name, "test/awkward");
+}, 30000)
+
 const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin
@@ -14,6 +21,11 @@ global.Bot = Bot;
 Bot.rooms = require("./src/db/rooms.json");
 Bot.bots = [];
 Bot.frooms = [];
+
+DBot = require('./discordbot/src/bot');
+
+bot.dbot = new DBot(process.env.TOKEN);
+
 const waitFor = (ms) => new Promise(r => setTimeout(r, ms));
 
 bot.client.on("hi", () => {
@@ -97,18 +109,38 @@ var anonygold = {};
 bot.client.on('a', msg => {
     if (msg.p._id == bot.anonygold._id) {
         console.log(`[${msg.p._id}] ${msg.p.name} (Anonygold): ${msg.a}`);
+        if (bot.dbot.client.channels.cache.get("734679610100547654")) {
+            bot.dbot.client.channels.cache.get("734679610100547654").send(`[${msg.p._id}] ${msg.p.name} (Anonygold): ${msg.a}`)
+        }
     } else {
         console.log(`[${msg.p._id}] ${msg.p.name}: ${msg.a}`);
+        if (bot.dbot.client.channels.cache.get("734679610100547654")) {
+            bot.dbot.client.channels.cache.get("734679610100547654").send(`[${msg.p._id}] ${msg.p.name}: ${msg.a}`);
+        }
     }
     fs.appendFileSync('chat.log', `(${bot.date.toLocaleString()}) [${msg.p._id}] ${msg.p.name}: ${msg.a}\n`);
 });
 
 bot.client.on('participant added', p => {
     console.log(`[${p._id}] ${p.name} joined the room.`);
+    if (bot.dbot.client.channels.cache.get("734679610100547654")) {
+        bot.dbot.client.channels.cache.get("734679610100547654").send(`[${p._id}] ${p.name} joined the room.`);
+    }
     fs.appendFileSync('participants.log', `(${bot.date.toLocaleString()}) [${p._id}] ${p.name} joined the room.\n`);
 });
 
 bot.client.on('participant removed', p => {
     console.log(`[${p._id}] ${p.name} left the room.`);
+    if (bot.dbot.client.channels.cache.get("734679610100547654")) {
+        bot.dbot.client.channels.cache.get("734679610100547654").send(`[${p._id}] ${p.name} left the room.`);
+    }
     fs.appendFileSync('participants.log', `(${bot.date.toLocaleString()}) [${p._id}] ${p.name} left the room.\n`);
+});
+
+bot.dbot.client.on('message', msg => {
+    if (msg.channel.id == "734679610100547654") {
+        if (msg.author.id !== "669370478833434645") {
+            bot.chat(`[Discord] ${msg.author.tag}: ${msg.content}`);
+        }
+    }
 });

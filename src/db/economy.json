@@ -305,10 +305,10 @@
           "timestamp": 1594228602347
         },
         "work": {
-          "timestamp": 1594380731178
+          "timestamp": 1595266036430
         }
       },
-      "money": 107
+      "money": 256
     },
     "b0d5ef7afba26568896b9402": {
       "name": "Anonymous",
@@ -356,9 +356,9 @@
       },
       "money": 0
     },
-    "ab0824be58e5afb05095d638": {
+    "e9e71411645c9d7b2e256ef5": {
       "name": "ı || ๖ۣۜ𝓝𝓮𝓫𝓾𝓵𝓪™ [🇬🇧] || ı",
-      "_id": "ab0824be58e5afb05095d638",
+      "_id": "e9e71411645c9d7b2e256ef5",
       "types": {
         "work": {
           "timestamp": 1594762680171
@@ -401,10 +401,13 @@
       "_id": "e42a1ba3ac6c2a639fb0a4d6",
       "types": {
         "work": {
-          "timestamp": 1594753079424
+          "timestamp": 1595014986083
+        },
+        "crime": {
+          "timestamp": 1595015019606
         }
       },
-      "money": 168
+      "money": 367
     },
     "a79f3b4011773b1014f97473": {
       "name": "Caioz/17/Boy/Wolf/Fox/Cat/ | !help",
@@ -431,10 +434,13 @@
       "_id": "906bb744e524094f5b496c91",
       "types": {
         "work": {
-          "timestamp": 1594505527795
+          "timestamp": 1595374842334
+        },
+        "crime": {
+          "timestamp": 1595374825834
         }
       },
-      "money": 54
+      "money": 121
     },
     "2ef397694dbf8cb0396bae67": {
       "name": "ꜱʏᴎᴛʜ",
@@ -474,13 +480,13 @@
       "_id": "6cee7483e6027986cd9acac3",
       "types": {
         "crime": {
-          "timestamp": 1594613470143
+          "timestamp": 1595262354077
         },
         "work": {
           "timestamp": 1594613602592
         }
       },
-      "money": 894
+      "money": 1804
     },
     "55b4d134ac15fdff4e70e1be": {
       "name": "billy bob joe",
@@ -589,10 +595,10 @@
       "_id": "5c5bbb65bae2b3e7321ddfa6",
       "types": {
         "crime": {
-          "timestamp": 1594732186275
+          "timestamp": 1595374553853
         }
       },
-      "money": 844
+      "money": 647
     },
     "70d89d2d5981f2a3493815b9": {
       "name": "Anonymous",
@@ -629,6 +635,158 @@
         }
       },
       "money": 182
+    },
+    "3952a0d1804f53c2e3b44cd8": {
+      "name": "Tentacles",
+      "_id": "3952a0d1804f53c2e3b44cd8",
+      "types": {
+        "crime": {
+          "timestamp": 1594821929926
+        }
+      },
+      "money": 511
+    },
+    "564c8892e44cc06daf9a9f4e": {
+      "name": "Anonymous",
+      "_id": "564c8892e44cc06daf9a9f4e",
+      "types": {
+        "crime": {
+          "timestamp": 1594830694772
+        }
+      },
+      "money": 694
+    },
+    "a376313d1e1fb4bb5ccd57e6": {
+      "name": "plank length corpus cavernosum(afk)",
+      "_id": "a376313d1e1fb4bb5ccd57e6",
+      "types": {
+        "work": {
+          "timestamp": 1594854197100
+        }
+      },
+      "money": 0
+    },
+    "843533a29819d2418c9b046b": {
+      "name": "Piano Sounds",
+      "_id": "843533a29819d2418c9b046b",
+      "types": {
+        "crime": {
+          "timestamp": 1594868675954
+        }
+      },
+      "money": 592
+    },
+    "056f55d0430a2a5d9a106ed5": {
+      "name": "𝕰𝖕𝖎𝖈 𝕯𝖆𝖘𝖍𝖊𝖗 𝓛𝓲𝓷𝓾𝔁 js!help",
+      "_id": "056f55d0430a2a5d9a106ed5",
+      "types": {
+        "work": {
+          "timestamp": 1594958690599
+        },
+        "crime": {
+          "timestamp": 1594958695265
+        }
+      },
+      "money": 811
+    },
+    "5cac46e31a8ebe0d0fe505a0": {
+      "name": "Anonymous",
+      "_id": "5cac46e31a8ebe0d0fe505a0",
+      "types": {
+        "work": {
+          "timestamp": 1594958814506
+        },
+        "crime": {
+          "timestamp": 1594958818604
+        }
+      },
+      "money": 763
+    },
+    "4ea0cc7d525f2157a1087788": {
+      "name": "Green Yoshi the Gladiator 0 Hp 942 Def",
+      "_id": "4ea0cc7d525f2157a1087788",
+      "types": {
+        "crime": {
+          "timestamp": 1595003415467
+        },
+        "work": {
+          "timestamp": 1595003450606
+        }
+      },
+      "money": 546
+    },
+    "1101603949d0f1687056412e": {
+      "name": "Polyfihy",
+      "_id": "1101603949d0f1687056412e",
+      "types": {
+        "crime": {
+          "timestamp": 1595101826379
+        }
+      },
+      "money": 798
+    },
+    "ce8ee7f9f258dff9625e652e": {
+      "name": "/adminlogin V672zv?YYJ (Level 40)",
+      "_id": "ce8ee7f9f258dff9625e652e",
+      "types": {
+        "crime": {
+          "timestamp": 1595129177507
+        }
+      },
+      "money": 290
+    },
+    "6ea40cf0d03e92c59e9a00b4": {
+      "name": "mr.pibb",
+      "_id": "6ea40cf0d03e92c59e9a00b4",
+      "types": {
+        "crime": {
+          "timestamp": 1595179459824
+        }
+      },
+      "money": 767
+    },
+    "75668fa3e23bbeee351d1e8d": {
+      "name": "Хх-Макс-хХх-Руссиан-хХ",
+      "_id": "75668fa3e23bbeee351d1e8d",
+      "types": {
+        "work": {
+          "timestamp": 1595252844970
+        }
+      },
+      "money": 84
+    },
+    "3f552e1cab1e715ba36bf3fb": {
+      "name": "Herokun Otaku",
+      "_id": "3f552e1cab1e715ba36bf3fb",
+      "types": {
+        "crime": {
+          "timestamp": 1595256593511
+        }
+      },
+      "money": 844
+    },
+    "4664ad819e8df34fdc10e9f8": {
+      "name": "gay spider",
+      "_id": "4664ad819e8df34fdc10e9f8",
+      "types": {
+        "crime": {
+          "timestamp": 1595374583842
+        }
+      },
+      "money": 722
+    },
+    "3e308e8928962f9896457cbb": {
+      "name": "911🚓 (911!help)",
+      "_id": "3e308e8928962f9896457cbb",
+      "types": {
+        "crime": {
+          "timestamp": 1595374770704
+        },
+        "work": {
+          "timestamp": 1595374856275
+        }
+      },
+      "money": 273
     }
   }
 }

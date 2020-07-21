@@ -74,12 +74,13 @@ module.exports = class Bot {
 
         this.adtoggle = true;
         this.adsint = setInterval(() => {
-            if (this.client.channel._id == "✧𝓡𝓟 𝓡𝓸𝓸𝓶✧") {
+            if (this.room == "✧𝓡𝓟 𝓡𝓸𝓸𝓶✧") {
                 if (this.adtoggle == true) {
                     this.chat(this.ads[Math.floor(Math.random()*this.ads.length)]);
                 }
             }
         }, 10*60*1000);
+
         this.Player = new MidiPlayer.Player((event) => {
             switch (event.name) {
                 case 'Note on':
@@ -97,7 +98,7 @@ module.exports = class Bot {
         this.maintenance();
         require("./temp.js").bind(this)();
 
-        this.stop = function () {
+        this.stop = () => {
             clearInterval(this.Player.setIntervalId);
             this.Player.setIntervalId = false;
             this.Player.startTick = 0;
@@ -145,17 +146,34 @@ module.exports = class Bot {
     }
 
     getUsage(cmd) {
-        let foundcmd = this.cmds.find((command) => cmd == command.cmd)
-        if (foundcmd) 
-          return foundcmd.usage.replace("PREFIX",this.prefix);
-          else 
-          return `There is no help for the command '${cmd}'`;
-      }
+        let found = false;
+        let comm = "";
+        this.cmds.forEach(command => {
+            if (typeof(command.cmd) == "string") {
+                if (cmd == command.cmd) {
+                    found = true;
+                    comm = command.usage.replace("PREFIX", this.prefix);
+                }
+            } else {
+                command.cmd.forEach(com => {
+                    if (cmd == com) {
+                        found = true;
+                        comm = command.usage.replace("PREFIX", this.prefix);
+                    }
+                });
+            }
+        });
+        if (!found) {
+            return `There is no help for '${cmd}'.`;
+        } else {
+            return comm;
+        }
+    }
 
     changeMode(mode, user, cmd, type, data, ms, msg) {
         if (mode == "cmd") {
             this.cmode = {
-                uesr: {_id: "", name: "", color: "#777"},
+                user: {_id: "", name: "", color: "#777"},
                 mode: "cmd",
                 cmd: null,
                 data: null,
@@ -295,6 +313,9 @@ module.exports = class Bot {
             if (this.client.getOwnParticipant.name !== this.name) {
                 this.client.sendArray([{m:'userset', set: {name:this.name}}]);
             }
+            if (this.room == "✧𝓡𝓟 𝓡𝓸𝓸𝓶✧") {
+                this.disablecmd("crown");
+            }
             this.chat("✅ Online");
         });
 
@@ -327,8 +348,18 @@ module.exports = class Bot {
                         this.keytoggle = true;
                     }, 5*60*1000);
                     this.generateRandomKey();
+                    fs.writeFile('.randkey', JSON.stringify(this.randomkey), err =>{
+                        if (err) {
+                            throw err;
+                        }
+                    });
                 } else {
                     this.generateRandomKey();
+                    fs.writeFile('.randkey', JSON.stringify(this.randomkey), err =>{
+                        if (err) {
+                            throw err;
+                        }
+                    });
                 }
             }
         });

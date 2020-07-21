@@ -13,7 +13,28 @@ module.exports = function () {
             highscore: highscore
         });
     }
-    this.addcmd("help", `Usage: PREFIXhelp (cmd)`, 0, msg => {
+
+    this.disablecmd = (cmd) => {
+        this.cmds.forEach(commandobj => {
+            if (typeof(commandobj.cmd) == "string") {
+                if (commandobj.cmd == cmd) {
+                    commandobj.func = msg => {
+                        this.chat("This command has been disabled.");
+                    }
+                }
+            } else if (typeof(commandobj.cmd) == "object") {
+                commandobj.cmd.forEach(cmdstr => {
+                    if (cmd == cmdstr) {
+                        commandobj.func = msg => {
+                            this.chat("This command has been disabled.");
+                        };
+                    }
+                });
+            }
+        });
+    }
+
+    this.addcmd(["help","h"], `Usage: PREFIXhelp <cmd>`, 0, msg => {
         if (msg.args.length - 1 > 0) {
             this.chat(this.getUsage(msg.args[1]));
         } else {
@@ -21,7 +42,11 @@ module.exports = function () {
             this.cmds.forEach((command) => {
                 if (!command.hidden) {
                     if (msg.p.rank.id >= command.minrank) {
-                        tosend += ` ${this.prefix}${command.cmd} | `;
+                        if (typeof(command.cmd) == "string") {
+                            tosend += ` ${this.prefix}${command.cmd} | `;
+                        } else {
+                            tosend += ` ${this.prefix}${command.cmd[0]} |`;
+                        }
                     }
                 }
             });
@@ -63,7 +88,7 @@ module.exports = function () {
         }
     }, 0, false);
 
-    this.addcmd("crown", `Usage: PREFIXcrown | Grants ownership of the channel.`, 0, msg => {
+    this.addcmd(["crown","c"], `Usage: PREFIXcrown | Grants ownership of the channel.`, 0, msg => {
         if (this.client.isOwner()) {
             this.client.sendArray([{m:'chown', id:msg.p.id}]);
             this.chat(`Giving ownership to ${msg.p.name}.`);
@@ -72,7 +97,7 @@ module.exports = function () {
         }
     }, 2, false);
 
-    this.addcmd("follow", `Usage: PREFIXfollow <user> | The cursor will follow the user.`, 1, msg => {
+    this.addcmd(["follow","f"], `Usage: PREFIXfollow <user> | The cursor will follow the user.`, 1, msg => {
         let p = this.getPart(msg.argcat);
         if (p) {
             this.cursor.load("off");
@@ -80,12 +105,13 @@ module.exports = function () {
                 this.pos.x = p.x;
                 this.pos.y = p.y;
             }
+            this.chat(`Now following ${p.name}.`);
         } else {
             this.chat(this.nouser);
         }
     }, 0, false);
 
-    this.addcmd("quote", `Usage: PREFIXquote <quote number>`, 0, msg => {
+    this.addcmd(["quote","q"], `Usage: PREFIXquote <quote number>`, 0, msg => {
         if (msg.args[1]) {
             if (this.quotes[msg.args[1]]) {
                 this.chat(this.quotes[msg.args[1]]);
@@ -124,19 +150,11 @@ module.exports = function () {
                 this.pos.x += this.vel.x;
                 this.pos.y += this.vel.y;
             }
+            this.chat(`Now following ${p.name}.`)
         } else {
             this.chat(this.nouser);
         }
     }, 0, false);
-
-    this.addcmd("ping", `Usage: PREFIXping <address>`, 1, msg => {
-        try {
-            this.chat(this.getPing(msg.argcat).avg);
-        } catch (err) {
-            console.log(err);
-            this.chat("An error has occurred.");
-        }
-    }, 2, false);
 
     this.addcmd("string", `Usage PREFIXstring <eval>`, 1, msg => {
         try {
@@ -146,6 +164,28 @@ module.exports = function () {
                 this.chat("Invalid usage.");
             }
         }
+    }, 0, false);
+
+    this.addcmd("room", `Usage: PREFIXroom <room> | Connects the bot to another room.`, 1, msg => {
+        if (Bot.bots.find((bot) => bot.room == msg.args[1])) {
+            this.chat(`❌The Bot is already connected in room ${msg.input(1)}.`);
+            return;
+        }
+        Bot.rooms[msg.args[1]] = {
+            "ppl": {}
+        }
+        Bot.updateroomdb();
+        this.chat(`Connecting Bot to room ${msg.input(1)}`);
+        Bot.startBot(msg.args[1]).then((a) => {
+            if (a.connected) {
+                a.data.client.on("hi", () => {
+                    this.chat(`Connected Bot in room ${a.data.client.channel._id}.`);
+                }) 
+            } else {
+                this.chat(`Failed to connect bot.`);
+                console.error(a.err);
+            }
+        });
     }, 0, false);
 
     this.addcmd("cursor", `Usage: PREFIXcursor <mode> | Use without any arguments to list cursor modes.`, 0, msg => {
@@ -194,16 +234,30 @@ module.exports = function () {
         this.chat("f i x e d m o m e n t");
     }, 0, true);
 
-    this.addcmd(["balance","bal"], `Usage: PREFIXbalance | Check your account balance.`, 0, msg => {
-        let money = this.economy.getEconomyUserBy_id(msg.p._id);
-        if (money) {
-            this.chat(`${money.name}, you have $${money.money}.`);
+    this.addcmd(["balance","bal"], `Usage: PREFIXbalance <user opt> | Check your account balance.`, 0, msg => {
+        if (!msg.args[1]) {
+            let money = this.economy.getEconomyUserBy_id(msg.p._id);
+            if (money) {
+                this.chat(`${money.name}, you have $${money.money}.`);
+            } else {
+                this.chat(`${msg.p.name}, you have no money.`);
+            }
         } else {
-            this.chat(`${msg.p.name}, you have no money.`);
+            let p = this.getPart(msg.args[1]);
+            if (p) {
+                let money = this.economy.getEconomyUserBy_id(p._id);
+                if (money) {
+                    this.chat(`${money.name} has $${money.money}.`);
+                } else {
+                    this.chat(`${p.name} has no money.`);
+                }
+            } else {
+                this.chat(this.nouser);
+            }
         }
     }, 0, false);
 
-    this.addcmd("work", `Usage: PREFIXwork | Work at your job.`, 0, msg => {
+    this.addcmd("work", `Usage: PREFIXwork | Do some work to earn money.`, 0, msg => {
         let money = this.economy.AttemptToGetMoney(msg.p.name, msg.p._id, "work");
         if (money.canGetMoney) {
             this.chat(this.economy.getMoneyMessageByType("work", money.good).replace("NICKNAME", msg.p.name) + "$" + money.moneygot);
@@ -255,6 +309,23 @@ module.exports = function () {
         }
     }, 1, false);
 
+    this.addcmd("play", `Usage: PREFIXplay <midi file>`, 1, msg => {
+        try {
+            let midiexists = fs.existsSync(`./midis/${msg.argcat}.mid`);
+        } catch (err) {
+            console.error(err);
+        }
+    });
+
+    this.addcmd("stop", `Usage; PREFIXstop`, 0, msg => {
+        // clearInterval(this.Player.setIntervalId);
+        // this.Player.setIntervalId = false;
+        // this.Player.startTick = 0;
+        // this.Player.startTime = 0;
+        // this.Player.resetTracks();
+        this.stop();
+    }, 3, true);
+
     this.addcmd("kickban", `Usage: PREFIXkickban <minutes> <user>`, 2, msg => {
         let p = this.getPart(msg.args[2]);
         if (p) {
@@ -290,15 +361,14 @@ module.exports = function () {
     }, 0, false);
 
     this.addcmd("ingredients", `Usage: PREFIXingredients <food> | Returns the ingredients of a pregenerated food.`, 1, msg => {
+        let triggered = false;
         this.objects.food.forEach(food => {
-            if (food.name.includes(msg.argcat)) {
-                let food = food.name;
-                let ingredients = food.ingredients;
+            if (food.name.toLowerCase().includes(msg.argcat.toLowerCase())) {
+                this.chat(`Ingredients of ${food.name}: ${food.ingredients}`);
+                triggered = true;
             }
         });
-        if (food && ingredients) {
-            this.chat(`Ingredients of ${food}: ${ingredients}`);
-        } else {
+        if (!triggered) {
             this.chat(`Couldn't find the ingredients of the specified food. Try to eat some random food to see what there is.`);
         }
     }, 0, false);
@@ -390,10 +460,14 @@ module.exports = function () {
         let p = this.getPart(msg.args[2]);
         if (p) {
             try {
+                if (msg.args[1] == "owner") {
+                    this.chat("Changing ranks to owner requires a key.");
+                    return;
+                }
                 this.changeRank(p._id, msg.args[1]);
                 this.chat(`${p.name}'s rank is now ${msg.args[1]}`);
             } catch (err) {
-                console.log(err);
+                console.error(err);
                 this.chat("There was an error with your request.");
             }
         } else {

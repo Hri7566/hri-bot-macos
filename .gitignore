@@ -91,7 +91,11 @@ out
 # Azure Functions artifacts
 bin
 obj
+
+# for bot
 appsettings.json
 local.settings.json
 chat.log
 token
+.randkey
+discordbot/
