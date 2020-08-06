@@ -186,7 +186,7 @@ module.exports = function () {
                 console.error(a.err);
             }
         });
-    }, 0, false);
+    }, 2, false);
 
     this.addcmd("cursor", `Usage: PREFIXcursor <mode> | Use without any arguments to list cursor modes.`, 0, msg => {
         if (msg.args.length - 1 > 0) {
@@ -347,7 +347,7 @@ module.exports = function () {
         this.chat(`\u034f\u034f     `+(msg.argcat.split("").reverse().join("")));
     }, 0, false);
 
-    this.addcmd("eat", `Usage: PREFIXeat`, 0, msg => {
+    this.addcmd("eat", `Usage: PREFIXeat <food> | Eat whatever you want. If you don't provide a food to eat, one will be generated for you.`, 0, msg => {
         if (!msg.args[1]) {
             this.chat(`${msg.p.name} ate ${this.objects.food[Math.floor(Math.random()*this.objects.food.length)].name.toLowerCase()}.`);
         } else {

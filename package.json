@@ -1,10 +1,10 @@
 {
   "name": "hri-bot",
-  "version": "3.6.2",
+  "version": "3.9.0",
   "description": "This bot was made by Hri7566. The original base source was written by BopItFreak for use with JAMB and his unofficial fishing bot. It is a rewrite of a rewrite of a rewrite of the original 7566 bot, which was a duplicate of Karl Marx's MarxBot. Never forget that a growing community is the future, and the future starts with you.",
   "main": "server.js",
   "scripts": {
-    "test": "screen sudo nodemon server.js",
+    "test": "screen sudo nodemon server.js --auto-restart",
     "start": "sudo node server.js",
     "stop": "pkill --signal SIGINT 7566"
   },

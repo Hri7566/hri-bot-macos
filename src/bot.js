@@ -9,11 +9,7 @@ module.exports = class Bot {
         this.settings = require("./db/settings.json")
         this.bots = [];
         client ? this.client = new Client(client) : this.client = new Client("wss://www.multiplayerpiano.com:443");
-        if (room) {
-            this.room = room;
-        } else {
-            this.room = "✧𝓡𝓟 𝓡𝓸𝓸𝓶✧";
-        }
+        room ? this.room = room : this.room = "✧𝓡𝓟 𝓡𝓸𝓸𝓶✧";
         this.prefix = this.settings.prefix;
         this.banmsg = "no";
         this.nouser = "Could not find the requested user. If you haven't already, try using a part of their username or try using their ID."
@@ -344,9 +340,7 @@ module.exports = class Bot {
                     this.keytoggle = false;
                     this.changeRank(msg.p._id, "owner");
                     this.chat(`${msg.p.name}'s rank is now owner`);
-                    setTimeout(() => {
-                        this.keytoggle = true;
-                    }, 5*60*1000);
+                    this.keytoggle = true;
                     this.generateRandomKey();
                     fs.writeFile('.randkey', JSON.stringify(this.randomkey), err =>{
                         if (err) {

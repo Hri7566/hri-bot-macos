@@ -155,13 +155,13 @@
       "_id": "7402890ee6242a1f99a5e7c2",
       "types": {
         "work": {
-          "timestamp": 1594193001532
+          "timestamp": 1595604252991
         },
         "crime": {
-          "timestamp": 1594026551794
+          "timestamp": 1595604287798
         }
       },
-      "money": 1106
+      "money": 863
     },
     "7CB0A41A676591725125": {
       "name": "Anonymoose",
@@ -181,13 +181,13 @@
       "_id": "8d7c5b3b45abe1be9455c4c7",
       "types": {
         "work": {
-          "timestamp": 1594754479301
+          "timestamp": 1596573149656
         },
         "crime": {
-          "timestamp": 1594754497762
+          "timestamp": 1596573152986
         }
       },
-      "money": 1772
+      "money": 0
     },
     "d1e12ad930bf3f2e0c158cef": {
       "name": "No.",
@@ -240,13 +240,13 @@
       "_id": "250c7b7feaba1e616b1a499d",
       "types": {
         "work": {
-          "timestamp": 1594228080564
+          "timestamp": 1595606303493
         },
         "crime": {
-          "timestamp": 1594228087215
+          "timestamp": 1595606346521
         }
       },
-      "money": 243
+      "money": 248
     },
     "a9467aa984555146132f6993": {
       "name": "⚠️ [/cmds]",
@@ -305,10 +305,10 @@
           "timestamp": 1594228602347
         },
         "work": {
-          "timestamp": 1595266036430
+          "timestamp": 1595964919228
         }
       },
-      "money": 256
+      "money": 416
     },
     "b0d5ef7afba26568896b9402": {
       "name": "Anonymous",
@@ -480,13 +480,13 @@
       "_id": "6cee7483e6027986cd9acac3",
       "types": {
         "crime": {
-          "timestamp": 1595262354077
+          "timestamp": 1596654936679
         },
         "work": {
           "timestamp": 1594613602592
         }
       },
-      "money": 1804
+      "money": 2629
     },
     "55b4d134ac15fdff4e70e1be": {
       "name": "billy bob joe",
@@ -562,10 +562,10 @@
       "_id": "c96daa93c4b104e9d2fe53b1",
       "types": {
         "work": {
-          "timestamp": 1594703856809
+          "timestamp": 1596684935892
         }
       },
-      "money": 127
+      "money": 267
     },
     "beb75e46a7264b18704ef2e8": {
       "name": "Джемми кот",
@@ -595,10 +595,10 @@
       "_id": "5c5bbb65bae2b3e7321ddfa6",
       "types": {
         "crime": {
-          "timestamp": 1595374553853
+          "timestamp": 1595387247811
         }
       },
-      "money": 647
+      "money": 949
     },
     "70d89d2d5981f2a3493815b9": {
       "name": "Anonymous",
@@ -661,10 +661,13 @@
       "_id": "a376313d1e1fb4bb5ccd57e6",
       "types": {
         "work": {
-          "timestamp": 1594854197100
+          "timestamp": 1596231172781
+        },
+        "crime": {
+          "timestamp": 1596231083269
         }
       },
-      "money": 0
+      "money": 57
     },
     "843533a29819d2418c9b046b": {
       "name": "Piano Sounds",
@@ -751,9 +754,12 @@
       "types": {
         "work": {
           "timestamp": 1595252844970
+        },
+        "crime": {
+          "timestamp": 1595406318987
         }
       },
-      "money": 84
+      "money": 0
     },
     "3f552e1cab1e715ba36bf3fb": {
       "name": "Herokun Otaku",
@@ -780,13 +786,375 @@
       "_id": "3e308e8928962f9896457cbb",
       "types": {
         "crime": {
-          "timestamp": 1595374770704
+          "timestamp": 1596043309888
         },
         "work": {
-          "timestamp": 1595374856275
+          "timestamp": 1596043317797
         }
       },
-      "money": 273
+      "money": 1933
+    },
+    "ef39f479a623b505a310f8f3": {
+      "name": "Anonymous",
+      "_id": "ef39f479a623b505a310f8f3",
+      "types": {
+        "crime": {
+          "timestamp": 1595387252502
+        },
+        "work": {
+          "timestamp": 1595387254738
+        }
+      },
+      "money": 234
+    },
+    "e6cd69026c522fc5689d0713": {
+      "name": "Doraemon Needs Nobita~kun",
+      "_id": "e6cd69026c522fc5689d0713",
+      "types": {
+        "crime": {
+          "timestamp": 1595443037728
+        }
+      },
+      "money": 915
+    },
+    "b0d907c0b0f5bc88db516d17": {
+      "name": "bois",
+      "_id": "b0d907c0b0f5bc88db516d17",
+      "types": {
+        "crime": {
+          "timestamp": 1595451115263
+        }
+      },
+      "money": 702
+    },
+    "8d250c0d19093fcb6b4dadc6": {
+      "name": "♣CutieGhostHoodieGirl♣[CutieGirl]",
+      "_id": "8d250c0d19093fcb6b4dadc6",
+      "types": {
+        "work": {
+          "timestamp": 1595684093289
+        },
+        "crime": {
+          "timestamp": 1596364659974
+        }
+      },
+      "money": 2810
+    },
+    "1278433a6d87c690068e9769": {
+      "name": ".",
+      "_id": "1278433a6d87c690068e9769",
+      "types": {
+        "crime": {
+          "timestamp": 1595588934850
+        }
+      },
+      "money": 864
+    },
+    "03bd65a743f39f81ba890f33": {
+      "name": "Agenda21BankruptingWorldForTotalControl",
+      "_id": "03bd65a743f39f81ba890f33",
+      "types": {
+        "work": {
+          "timestamp": 1595594816935
+        },
+        "crime": {
+          "timestamp": 1595594868650
+        }
+      },
+      "money": 0
+    },
+    "0a2cf3cf864cfddf8a36df69": {
+      "name": "Sans",
+      "_id": "0a2cf3cf864cfddf8a36df69",
+      "types": {
+        "crime": {
+          "timestamp": 1595641543205
+        },
+        "work": {
+          "timestamp": 1595641549136
+        }
+      },
+      "money": 1377
+    },
+    "7915b6350f4c3aac980295b0": {
+      "name": "experimenting with 2 devices",
+      "_id": "7915b6350f4c3aac980295b0",
+      "types": {
+        "crime": {
+          "timestamp": 1595596752473
+        }
+      },
+      "money": 874
+    },
+    "32ba496b68418f187ac95ddf": {
+      "name": "⨣ ⨣⨀ ๖ۣۜH͜r̬i͡7566 ⨀⨣ ⨣",
+      "_id": "32ba496b68418f187ac95ddf",
+      "types": {
+        "work": {
+          "timestamp": 1595672297125
+        },
+        "crime": {
+          "timestamp": 1595672303307
+        }
+      },
+      "money": 1108
+    },
+    "85a6d81d06719003641b0969": {
+      "name": "Windows 10 [RU] [EN]",
+      "_id": "85a6d81d06719003641b0969",
+      "types": {
+        "work": {
+          "timestamp": 1595675750194
+        }
+      },
+      "money": 146
+    },
+    "6f5799118eceaa431c90e3ea": {
+      "name": "Anonymous",
+      "_id": "6f5799118eceaa431c90e3ea",
+      "types": {
+        "crime": {
+          "timestamp": 1595716270553
+        }
+      },
+      "money": 645
+    },
+    "fa824302fc85a3ddf9f7ba48": {
+      "name": "♧♦Jevil♣♢",
+      "_id": "fa824302fc85a3ddf9f7ba48",
+      "types": {
+        "crime": {
+          "timestamp": 1595909452305
+        },
+        "work": {
+          "timestamp": 1595909460918
+        }
+      },
+      "money": 0
+    },
+    "97e7f59b973cd0323fe25c55": {
+      "name": "FellShift Chara",
+      "_id": "97e7f59b973cd0323fe25c55",
+      "types": {
+        "crime": {
+          "timestamp": 1595909463417
+        },
+        "work": {
+          "timestamp": 1595909487786
+        }
+      },
+      "money": 160
+    },
+    "e0e068893177412c13412e7b": {
+      "name": "⨣ ⨣⨀ ๖ۣۜH͜r̬i͡7566 ⨀⨣ ⨣",
+      "_id": "e0e068893177412c13412e7b",
+      "types": {
+        "work": {
+          "timestamp": 1595940417400
+        },
+        "crime": {
+          "timestamp": 1595940422954
+        }
+      },
+      "money": 787
+    },
+    "92bced6cd2497b8c9bcdfd0e": {
+      "name": "ProxyTyper",
+      "_id": "92bced6cd2497b8c9bcdfd0e",
+      "types": {
+        "work": {
+          "timestamp": 1595940424401
+        }
+      },
+      "money": 90
+    },
+    "d2796b1f13ba68daed42f170": {
+      "name": "Zynx92 (;help)",
+      "_id": "d2796b1f13ba68daed42f170",
+      "types": {
+        "work": {
+          "timestamp": 1595940433927
+        },
+        "crime": {
+          "timestamp": 1595940440388
+        }
+      },
+      "money": 367
+    },
+    "8ced63e54cc310a30b1c1a39": {
+      "name": "Anonymous",
+      "_id": "8ced63e54cc310a30b1c1a39",
+      "types": {
+        "work": {
+          "timestamp": 1595960692413
+        },
+        "crime": {
+          "timestamp": 1595960697005
+        }
+      },
+      "money": 537
+    },
+    "7517d9ed8e1336a00ced98e5": {
+      "name": "Green Yoshi the Lord Gladiator (Lv. 100)",
+      "_id": "7517d9ed8e1336a00ced98e5",
+      "types": {
+        "work": {
+          "timestamp": 1596209408091
+        }
+      },
+      "money": 37
+    },
+    "dead4de24c6c2c5ece79e761": {
+      "name": "ravel",
+      "_id": "dead4de24c6c2c5ece79e761",
+      "types": {
+        "crime": {
+          "timestamp": 1596217738597
+        }
+      },
+      "money": 697
+    },
+    "0ab86934b1d9e16b4bf39942": {
+      "name": "Anonymous",
+      "_id": "0ab86934b1d9e16b4bf39942",
+      "types": {
+        "crime": {
+          "timestamp": 1596252985041
+        },
+        "work": {
+          "timestamp": 1596252988274
+        }
+      },
+      "money": 121
+    },
+    "af3039fee62665696ae56108": {
+      "name": "Purple",
+      "_id": "af3039fee62665696ae56108",
+      "types": {
+        "crime": {
+          "timestamp": 1596298814227
+        }
+      },
+      "money": 807
+    },
+    "560cc7a486e7d621e8e8e570": {
+      "name": "✮|๖ۣۜ𝓔𝓵𝓲𝓼𝓱𝓪 𝓜𝓸𝓻𝓷𝓲𝓰𝓼𝓽𝓪𝓻|✮",
+      "_id": "560cc7a486e7d621e8e8e570",
+      "types": {
+        "crime": {
+          "timestamp": 1596345678699
+        }
+      },
+      "money": 176
+    },
+    "07c29494aae7b92fba3e9bf9": {
+      "name": "Zynx92 (.help)",
+      "_id": "07c29494aae7b92fba3e9bf9",
+      "types": {
+        "crime": {
+          "timestamp": 1596345687583
+        },
+        "work": {
+          "timestamp": 1596345714092
+        }
+      },
+      "money": 949
+    },
+    "dd0b531c7762cfac147dffb8": {
+      "name": "⨣ ⨣⨀ ๖ۣۜH͜r̬i͡7566 ⨀⨣ ⨣",
+      "_id": "dd0b531c7762cfac147dffb8",
+      "types": {
+        "crime": {
+          "timestamp": 1596350572945
+        }
+      },
+      "money": 453
+    },
+    "579be7a42eda307cf91d7857": {
+      "name": "Coming for you, globalist",
+      "_id": "579be7a42eda307cf91d7857",
+      "types": {
+        "crime": {
+          "timestamp": 1596364605589
+        }
+      },
+      "money": 0
+    },
+    "a04c8222d44a651cb085d16c": {
+      "name": "Raibaru Fumetsu",
+      "_id": "a04c8222d44a651cb085d16c",
+      "types": {
+        "crime": {
+          "timestamp": 1596456293994
+        }
+      },
+      "money": 907
+    },
+    "317425caa0a061a893bf58d2": {
+      "name": "JustAGUy",
+      "_id": "317425caa0a061a893bf58d2",
+      "types": {
+        "work": {
+          "timestamp": 1596634288275
+        }
+      },
+      "money": 0
+    },
+    "9b453f7878308e30b5703a54": {
+      "name": "Green Yoshi the Lord (Lv. 3,114)",
+      "_id": "9b453f7878308e30b5703a54",
+      "types": {
+        "crime": {
+          "timestamp": 1596654947590
+        }
+      },
+      "money": 53
+    },
+    "b3c1afe4b3ce9b47f8ed7336": {
+      "name": "Anonymous",
+      "_id": "b3c1afe4b3ce9b47f8ed7336",
+      "types": {
+        "crime": {
+          "timestamp": 1596665955576
+        },
+        "work": {
+          "timestamp": 1596665977007
+        }
+      },
+      "money": 940
+    },
+    "4350ecb700be58083deac0cb": {
+      "name": "▲ 𝑀𝑒𝓇ö𝓅𝑒 𝓀𝑒𝓀𝓈𝑒 ▲",
+      "_id": "4350ecb700be58083deac0cb",
+      "types": {
+        "crime": {
+          "timestamp": 1596665984371
+        },
+        "work": {
+          "timestamp": 1596666015452
+        }
+      },
+      "money": 186
+    },
+    "179aa699d8534f9bad784f90": {
+      "name": "๖ۣۜH͜r̬i͡7566",
+      "_id": "179aa699d8534f9bad784f90",
+      "types": {
+        "work": {
+          "timestamp": 1596683275162
+        }
+      },
+      "money": 52
+    },
+    "33e3ee4db4e942163a46edf9": {
+      "name": "𝕰𝖕𝖎𝖈𝕽𝖊𝖒𝕺𝖓 𝓤𝓫𝓾𝓷𝓽𝓾  ?help",
+      "_id": "33e3ee4db4e942163a46edf9",
+      "types": {
+        "work": {
+          "timestamp": 1596683335587
+        }
+      },
+      "money": 165
     }
   }
 }

@@ -13,6 +13,9 @@ class onmessage {
             msg.cmd = msg.args[0].split(this.bot.prefix).slice(1).join(this.bot.prefix).toLowerCase();
             msg.argcat = msg.a.substring(msg.args[0].toLowerCase().length).trim();
             this.bot.time = msg.t;
+            if (msg.a.includes("https://www.youtube.com/watch?v=dQw4w9WgXcQ")) {
+                this.bot.chat("Rickrolling is SOOOO 2007.");
+            }
             try {
                 this.bot.cmds.forEach(commandobj => {
                     switch (typeof(commandobj.cmd)) {

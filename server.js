@@ -7,9 +7,8 @@ var name = "✿ ๖ۣۜ7566 ☭";
 var bot = new Bot(name);
 
 setTimeout(() => {
-    var bot2 = new Bot(name, "lobby2");
-    var bot3 = new Bot(name, "test/awkward");
-}, 30000)
+    var bot2 = new Bot(name, "test/awkward");
+}, 30000);
 
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -137,10 +136,13 @@ bot.client.on('participant removed', p => {
     fs.appendFileSync('participants.log', `(${bot.date.toLocaleString()}) [${p._id}] ${p.name} left the room.\n`);
 });
 
+prevmsg = "";
+
 bot.dbot.client.on('message', msg => {
     if (msg.channel.id == "734679610100547654") {
-        if (msg.author.id !== "669370478833434645") {
+        if (!(/\[.+\] /.test(msg.content))) {
             bot.chat(`[Discord] ${msg.author.tag}: ${msg.content}`);
+            prevmsg = `[Discord] ${msg.author.tag}: ${msg.content}`;
         }
     }
 });
