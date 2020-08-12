@@ -305,10 +305,10 @@
           "timestamp": 1594228602347
         },
         "work": {
-          "timestamp": 1595964919228
+          "timestamp": 1596829427320
         }
       },
-      "money": 416
+      "money": 455
     },
     "b0d5ef7afba26568896b9402": {
       "name": "Anonymous",
@@ -562,10 +562,10 @@
       "_id": "c96daa93c4b104e9d2fe53b1",
       "types": {
         "work": {
-          "timestamp": 1596684935892
+          "timestamp": 1596761086823
         }
       },
-      "money": 267
+      "money": 384
     },
     "beb75e46a7264b18704ef2e8": {
       "name": "Джемми кот",
@@ -1105,10 +1105,10 @@
       "_id": "9b453f7878308e30b5703a54",
       "types": {
         "crime": {
-          "timestamp": 1596654947590
+          "timestamp": 1596825744095
         }
       },
-      "money": 53
+      "money": 882
     },
     "b3c1afe4b3ce9b47f8ed7336": {
       "name": "Anonymous",
@@ -1155,6 +1155,36 @@
         }
       },
       "money": 165
+    },
+    "0f03f4dcaeed6a13c81451a2": {
+      "name": "✿ ๖ۣۜ7566 ☭ (^help) [3.9.0]",
+      "_id": "0f03f4dcaeed6a13c81451a2",
+      "types": {
+        "work": {
+          "timestamp": 1596797583743
+        }
+      },
+      "money": 200
+    },
+    "a973719198713dd73de714f9": {
+      "name": "Genetronal2O",
+      "_id": "a973719198713dd73de714f9",
+      "types": {
+        "work": {
+          "timestamp": 1596797597868
+        }
+      },
+      "money": 33
+    },
+    "c7482304bec2e6c1a6d12a74": {
+      "name": "Terrunth, Champion of the White",
+      "_id": "c7482304bec2e6c1a6d12a74",
+      "types": {
+        "crime": {
+          "timestamp": 1596827543626
+        }
+      },
+      "money": 0
     }
   }
 }

@@ -156,6 +156,10 @@ module.exports = function () {
         }
     }, 0, false);
 
+    this.addcmd("balloonstring", null, 0, msg => {
+        this.chat("it's ball on string, not balloon string");
+    }, 0, true);
+
     this.addcmd("string", `Usage PREFIXstring <eval>`, 1, msg => {
         try {
             this.chat(`Answer: ${math.evaluate(msg.argcat)}`);
